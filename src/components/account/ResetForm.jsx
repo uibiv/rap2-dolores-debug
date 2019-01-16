@@ -81,7 +81,7 @@ class LoginForm extends Component {
       })
       onReset(email, password, (result) => {
         if (!result.isOk) {
-          alert(result.errMsg)
+          console.error(result.errMsg)
           return
         }
         if (result.data) {

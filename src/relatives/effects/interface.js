@@ -83,7 +83,7 @@ export function* unlockInterface(action) {
       yield put(InterfaceAction.unlockInterfaceSucceeded(action.id))
       if (action.onResolved) action.onResolved()
     } else {
-      alert(`发生错误：${res.errMsg}`)
+      console.error(`发生错误：${res.errMsg}`)
     }
   } catch (e) {
     console.error(e.message)
